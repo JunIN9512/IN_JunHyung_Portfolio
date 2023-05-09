@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;700&display=swap');
+
+@font-face{font-family: "T-Star Pro";
+    src: url(../fonts/T-StarPro-Light.woff) format('woff'),
+         url(../fonts/T-StarPro-Light.woff2) format('woff2');
+    font-weight: 100;}
+@font-face{font-family: "T-Star Pro";
+    src: url(../fonts/T-StarPro-Regular.woff) format('woff'),
+         url(../fonts/T-StarPro-Regular.woff2) format('woff2');
+    font-weight: 300;}
+@font-face{font-family: "T-Star Pro";
+    src: url(../fonts/T-StarPro-Medium.woff) format('woff'),
+         url(../fonts/T-StarPro-Medium.woff2) format('woff2');
+    font-weight: 500;}
+@font-face{font-family: "T-Star Pro";
+    src: url(../fonts/T-StarPro-Bold.woff) format('woff'),
+         url(../fonts/T-StarPro-Bold.woff2) format('woff2');
+    font-weight: 700;}
+@font-face{font-family: "T-Star Pro";
+    src: url(../fonts/T-StarPro-Heavy.woff) format('woff'),
+         url(../fonts/T-StarPro-Heavy.woff2) format('woff2');
+    font-weight: 800;}
+
+@font-face{font-family: "Inter";
+    src: url(../fonts/Inter-Thin.woff) format('woff'),
+         url(../fonts/Inter-Thin.woff2) format('woff2');
+    font-weight: 100;}
+@font-face{font-family: "Inter";
+    src: url(../fonts/Inter-ExtraLight.woff) format('woff'),
+         url(../fonts/ExtraLight.woff2) format('woff2');
+    font-weight: 200;}
+@font-face{font-family: "Inter";
+    src: url(../fonts/Inter-Light.woff) format('woff'),
+         url(../fonts/Inter-Light.woff2) format('woff2');
+    font-weight: 300;}
+@font-face{font-family: "Inter";
+    src: url(../fonts/Inter-Regular.woff) format('woff'),
+         url(../fonts/Inter-Regular.woff2) format('woff2');
+    font-weight: 400;}
+@font-face{font-family: "Inter";
+    src: url(../fonts/Inter-Medium.woff) format('woff'),
+         url(../fonts/Inter-Medium.woff2) format('woff2');
+    font-weight: 500;}
+@font-face{font-family: "Inter";
+    src: url(../fonts/Inter-SemiBold.woff) format('woff'),
+         url(../fonts/Inter-SemiBold.woff2) format('woff2');
+    font-weight: 600;}
+@font-face{font-family: "Inter";
+    src: url(../fonts/Inter-Bold.woff) format('woff'),
+         url(../fonts/Inter-Bold.woff2) format('woff2');
+    font-weight: 700;}
+@font-face{font-family: "Inter";
+    src: url(../fonts/Inter-ExtraBold.woff) format('woff'),
+         url(../fonts/Inter-ExtraBold.woff2) format('woff2');
+    font-weight: 800;}
+@font-face{font-family: "Inter";
+    src: url(../fonts/Inter-Black.woff) format('woff'),
+         url(../fonts/Inter-Black.woff2) format('woff2');
+    font-weight: 900;}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li, a,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    text-decoration: none;
+    font-weight: inherit;
+    list-style: none;
+    color: inherit;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+img{
+    max-width: 100%;
+}
+button{
+    background: none;
+    border: none;
+    text-decoration: inherit;
+    font-style: inherit;
+    color: inherit;
+}
+img{
+    max-width: 100%;
+}
+:root{
+    box-sizing: border-box;
+    --h1: 7.5em; /* 150px */
+    --h2: 5em; /* 100px */
+    --h3: 3.75em; /* 75px */
+    --h4: 2.5em; /* 50px */
+    
+    --bor: 1px dotted #c31e38;
+
+    --red:#c31e38;
+    --grey: #d9d9d9;
+    --sub:#b8b8b8;
+    --tit:#e8e8e8;
+    --back:#222422;
+    touch-action: none;
+
+}
+span{
+    display: inline-block;
+}
+.blind{
+    position: absolute;
+    width: 1px; height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+.han{
+    font-family: "Inter";
+}
+*{margin:0; padding:0;}
+body{
+    overflow-x: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    /* -webkit-transform: translate3d(0, 0, 0); */
+    -moz-transform: translate3d(0, 0, 0);
+}
+#wrap{
+    max-width: 2000px;
+    font-family: "T-Star Pro", "Noto Sans KR",Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color:#000;
+    position: relative;
+    user-select: none;
+}
+.inner{
+    width:1280px;
+    margin:0 auto;
+    position: relative;
+}
+
+
+

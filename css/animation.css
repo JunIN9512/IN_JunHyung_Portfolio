@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+
+/* 나타나는 애니메이션 효과 */
+@keyframes appear{
+    0%{opacity: 0;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+/* 나타나는 애니메이션 효과 */
+@keyframes twinkle{
+    0%{opacity: 0;}
+    14%{opacity: 0;}
+    28%{opacity: .9;}
+    43%{opacity: 0;}
+    56%{opacity: 0;}
+    71%{opacity: .9;}
+    85%{opacity: 0;}
+    100%{opacity: 0;}
+}
+
+/* 사라지는 애니메이션 효과 */
+@keyframes disappear{
+    0%{opacity: 1;}
+    50%{opacity: .5;}
+    100%{opacity: 0;}
+}
+
+/* 화살표 아래로 쏱아지는 효과 */
+@keyframes arrowDown{
+    0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-0.25em, -0.25em);
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(0.25em, 0.25em);
+    }
+  }
+/* 화살표 위로 올라가는 효과 */
+@keyframes arrowFloat{
+    0%{
+      opacity: 0;
+      transform: rotate(225deg) translate(0em, 0em);
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+      transform: rotate(225deg) translate(.5em, .5em);
+    }
+  }
+
+  /* 포트폴리오 배경 나타나는효과 */
+  @keyframes bgShow {
+    0%{transform: scaleY(400%) translateY(100%); opacity: 0;}    
+    100%{transform: scaleY(100%) translateY(-50%); opacity: .8;}    
+  }

@@ -1,0 +1,840 @@
+@charset "utf-8";
+
+/* 스크롤 터치 막기 */
+.hidden {overflow:hidden !important; touch-action:none;}
+
+/* 북촌한옥마을 팝업 */
+.m_pop{
+    z-index: 999;
+    width: 100vw; height: 100vh;
+    position: fixed;
+    top:0; left: 0;
+    display: none;
+}
+.m_pop.on{display: block;} /* 클래스 유무에 따른 팝업기능 */
+
+.m_pop .mpop_inner{ /* mpop 위지조절 */
+    width: auto; height: auto;
+    position: absolute;
+    top:50%; left: 50%;
+    transform: translate(-50%, calc(-50% + 40px));
+    height: auto;
+    text-align: center;
+}
+.mpop_inner img{ /* 액자 */
+    width: 90%;z-index: 999;
+}
+.mpop_inner .m_mask{ /* iframe mask 액자 */
+    width: 72%; height: 86%;
+    position: absolute;
+    top:7%; left:14%;
+    border-radius: 5%;
+    overflow: hidden;}
+.mpop_inner .m_mask #m_site{ /* iframe 화면 사이즈 */
+    width: 104%; height: 103%;
+}
+.mpop_inner .mpop_btn{ /* mpop 닫기버튼 */
+    position: absolute;
+    bottom:101%; left: 50%;
+    transform: translateX(-50%);
+    font-family: inherit;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 999;
+    letter-spacing: .05em;
+    color: #fff;
+}
+.m_pop .mpop_overlay{ /* mpop overlay 검은배경 */
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, .5);
+    z-index: 999;}
+
+@media only screen and (max-width: 1480px) and (min-width: 1180px) { /* 애매하게 깨지는 부분 */
+    .con1_txt .small{right:-21%;}
+    #con2 .con2_list{ /* 2번째페이지 정렬 */
+        padding-top: 25%;
+    }
+    .con2_list .con2_1{ /* 마우스 따라 움직이는 이미지 */
+        width:250px; height:250px;
+        min-width: 250px;
+        padding-left:4%;
+    }
+    .con2_list .con2_2{ /* 가운데 개인정보 */
+        margin-left: 80px;
+        width: 33%;}
+    .con2_list .con2_2 .intro_tit{ /* 웹 디자이너 퍼블리셔 영어 */
+        font-size: 1.8em;
+        padding-bottom: 15px;}
+    .con2_list .con2_2 .intro_txt{ /* 이메일 전화번호 */
+        font-size: 1.3em;
+        padding-bottom: 15px;
+    }
+    .con2_list .con2_2>.han{ /* 이름 한글폰트 설정 */
+        font-size: 2.3em;
+        padding:20px 0;}
+    .con2_list .con2_3{width: 32%;}
+    .con2_list .con2_3 .explain{ /* 자기소개 글 */
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 7.5%;
+    }
+    .con2_3 .tool_icon{  /* tool list 박스너비 */
+        max-width: 400px;
+        padding-right: 30px;
+    }
+    .con2_3 .tool_icon .tool_list li::before{max-height: 30px;}
+    
+    .tool_icon .tool_list li .graph{
+        transform: translateY(7.5%);}
+    .tool_icon .tool_list li:nth-child(-n+3) .graph{
+        transform: translateY(50%);
+    }
+    .tool_list li .graph .bar{
+        font-size: 1rem;
+        line-height: 120%;
+    }
+
+    .m_txt .txt_tit{ /* 제목 리스트 */
+        margin-top: -10px;
+        padding-top:0;}
+    .m_txt .m_h_sub::after{ /* 제목하단 밑줄 */
+        content: "";
+        display: block;
+        clear: both;
+        margin:12.5px auto 17px;
+        width:90%; height:2px;
+        background: var(--tit);
+    }
+    .m_txt .txt_txt{ /* 설명글 리스트 */
+        width:90%;
+    }
+
+    .m_list .m_btnlist{ /* 웹페이지 하단 버튼 리스트 */
+        width:80%;
+        margin:50px auto 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .m_p>.bold{margin-right:.8em;} /* 볼드체 */
+    #con4 .txt_txt .m_p:first-child>.han{letter-spacing: -.1em;} /* 한옥마을 첫번째문단 */
+    #con6 .txt_txt .m_p:first-child>.han{letter-spacing: -.1em;} /* 깔루아 */
+
+    .pop .pop_inner  .validation{
+        width: 95%;
+        }
+}
+
+@media only screen and (max-width: 1179px) and (min-width: 768px) { /* 태블릿 */
+     
+        /* header */
+    #header .h_list #nav{ /* 네비 정렬 폭 */
+        width:80%;
+        }
+        /* visual 비쥬얼 첫번째 화면 */
+    .con_list #con1 .con1_txt{
+        width:80vw; height:60%;
+        min-height: 470px;
+        min-width: 700px;
+        border: 5px solid #fff;
+        box-sizing: border-box;
+        padding-bottom: 20px;
+        padding-right:10px;
+    }
+    .con1_txt .big{font-size: var(--h3);}
+    .con1_txt .small{
+        font-size: 1em;
+        right: -19%;
+        }
+    .con1_txt h1{
+        font-size: var(--h1);
+        margin:10px 0 35px;}
+    .con1_txt h3{font-size: 3em;}
+    
+    
+    #con1  .drop_arrow{
+        width:.8em; height:.8em;
+        bottom: 9%;
+        transform: translateX(calc(-50% + 52px));
+    }
+    #con1  .drop_arrow span{
+        border-bottom: 1px solid #fff;
+        border-right: 1px solid #fff;
+        margin:-25px;
+    }
+
+            /* main */
+    #con2 .con2_list{ /* 2번째페이지 정렬 */
+        padding-top: 7.5%;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .con2_list .con2_1{ /* 마우스 따라 움직이는 이미지 */
+        width:250px; height:250px;
+        min-width: 250px;
+        padding-left:8%;
+        padding-right: 0;
+    }
+    .con2_list .con2_2{ /* 가운데 개인정보 */
+        margin-left: 0;
+        width: 48%;}
+    .con2_list .con2_2 .intro_txt{ /* 이메일 전화번호 */
+        font-size: 1.2em;
+        padding-bottom: 15px;
+    }
+    .con2_list .con2_2>.han{ /* 이름 한글폰트 설정 */
+        font-size: 2.3em;
+        padding:20px 0;}
+
+    .con2_list .con2_3{
+        width: 130%; height: 40%;
+        margin: -5% auto 0;
+        margin-left: 5%;
+        display: flex; justify-content: center;}
+    .con2_list .con2_3 .explain{ /* 자기소개 글 */
+        width: 70%;
+        min-width: 360px;
+        font-size: 1em;
+        line-height: 2;
+        margin-bottom: 7.5%;
+        padding-right: 2%;
+    }
+    .con2_3 .tool_icon{  /* tool list 박스너비 */
+        width: 50%; height: 100%;
+        min-width: 300px;
+        margin-top: -1%;
+        padding-right: 10px;
+        /* box-sizing: border-box; */
+    }
+    .tool_icon .tool_list li{ /* tool_list li */
+        max-height: 15px;
+        margin:0 5px;
+        z-index: 1;}
+    .tool_icon .tool_list li img{
+        width:10%;
+    }
+    .tool_icon .tool_list li:nth-child(-n+3) img{width: 9%;}
+    .con2_3 .tool_icon .tool_list li::before{
+        max-width: 25px;
+        max-height: 25px;
+    }
+    .con2_3 .tool_icon .tool_list li:nth-child(-n+3)::before{
+        transform: translate(5%, 6%);
+    }
+    
+    .tool_icon .tool_list li .graph{
+        transform: translateY(7.5%);}
+    .tool_icon .tool_list li:nth-child(-n+3) .graph{
+        transform: translateY(50%);
+    }
+    .tool_list li .graph .bar{
+        font-size: .9rem;
+        line-height: 100%;
+    }
+
+
+        .m_list .m_thum{ /* 이미지 박스 */
+            width:40%;}
+        .m_thum .m_thum_img{ /* 이미지 */
+            width:80%;
+            margin:0 auto;
+        }
+        .m_list .m_txt{ /* 우측 설명글 리스트 */
+            width:60%;}
+        .m_txt .txt_tit{ /* 제목 리스트 */
+            padding-top:5px;
+            white-space: nowrap;}
+        .m_txt .m_h{ /* 웹사이트 타이틀 */
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+        #con4 .txt_tit .m_h{
+            font-size: 1.3em;
+        }
+        .m_txt .m_h_sub{ /* 제목하단 서브타이틀 */
+            font-size:.8em;
+        }
+        .m_txt .m_h_sub::after{ /* 제목하단 밑줄 */
+            margin:10px auto 15px;
+            width:90%; height:1.5px;
+        }
+        .m_txt .txt_txt{ /* 설명글 리스트 */
+            width:90%;
+            margin:0 auto;
+        }
+        .m_txt .m_p{ /* 설명글 */
+            font-size: .9em;
+            margin-bottom: 15px;}
+        .m_p>.bold{margin-right:.8em;} /* 볼드체 */
+        .m_p>.han{font-size: 0.8em;} /* 한글 */
+        .m_list .m_btnlist{ /* 웹페이지 하단 버튼 리스트 */
+            width:80%;
+            margin:40px auto 0;
+        }
+        .m_btnlist .m_btn{ /* 웹페이지 하단 버튼 */
+            /* width:10%; height:10%; */
+            padding:5px 15px;
+            font-size: .8em;
+        }
+
+    
+        #con4 .txt_txt .m_p:first-child>.han{letter-spacing: -.1em;} /* 한옥마을 첫번째문단 */
+        #con6 .txt_txt .m_p:first-child>.han{letter-spacing: -.1em;} /* 깔루아 */
+
+        .m_list .design_txt::after{ /* 타이틀 밑줄 */
+            margin:10px auto 15px;
+            width:100%; height:1.5px;
+        }
+        .design_txt .dt{ /* 타이틀 제목 */
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: .05em;}
+        .design_txt .dts{ /* 타이틀 서브 */
+            font-size: .8em;
+            letter-spacing: -.02em;
+            white-space: nowrap;
+            }
+        #con7 #footer{
+            padding:10px 0 10px;
+            }
+        #footer .footer_txt{
+            font-size: .7em;
+        }
+        #footer .footer_txt p{
+            margin-bottom: 1.5px;}
+        #footer .footer_txt p:nth-of-type(1){
+            margin-bottom: 5px;
+            font-size: 1em;}
+
+        #con7  .float_arrow{
+            width:.8em; height:.8em;
+            bottom: 15%;
+            transform: translateX(calc(-50% + 51px));
+        }
+        .float_arrow span{
+            border-bottom: 1px solid #fff;
+            border-right: 1px solid #fff;
+            margin:-25px;
+        }
+        .pop .pop_inner  .validation{
+            width: 100%;
+            }
+    
+    }
+    @media only screen and (max-width: 767px) and (min-width: 420px) { /* 모바일 */
+        /* header */
+        #header{ /* 헤더 */
+            font-size: 1.2em;
+            }
+        #header .h_list{ /* 네비 리스트 */
+            width:100%;
+        }
+        #header .h_list #nav{ /* 네비 정렬 폭 */
+            width:95%;
+            }
+        #header #pagenation{
+            visibility: hidden;}
+
+        #contents{height: calc(var(--vh, 1vh)*100);}/* 모바일크롬 주소창 높이값 뺀 viewport height값 */
+        .con_list .con{height: calc(var(--vh, 1vh)*100);}/* 모바일크롬 주소창 높이값 뺀 viewport height값 */
+        .con_list #con1 video{height: calc(var(--vh, 1vh)*100);}
+            /* visual 비쥬얼 첫번째 화면 */
+        .con_list #con1 .con1_txt{
+            width:80vw; height: 70%;
+            min-width: 340px;
+            min-height: 340px;
+            border: 3px solid #fff;
+            padding-bottom: 10px;
+            padding-right:10px;
+        }
+        .con1_txt .big{font-size: 2em;}
+        .con1_txt .small{
+            top: 140%; right:50%;
+            transform: translateX(50%);
+            font-size: 1em;
+            }
+        .con1_txt h1{
+            font-size: 3.7em;
+            margin:15% 0 10% 8px;}
+        .con1_txt h3{
+            font-size: 2em;
+            line-height: 1.2em;}
+        
+        
+        #con1  .drop_arrow{
+            width:.8em; height:.8em;
+            bottom: 9%;
+            transform: translateX(calc(-50% + 52px));
+        }
+        #con1  .drop_arrow span{
+            border-bottom: 2px solid #fff;
+            border-right: 2px solid #fff;
+            margin:-25px;
+        }
+    
+        /* main */
+        #con2 .con2_list{ /* 2번째페이지 정렬 */
+        padding-top: 10%;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .con2_list .con2_1{ /* 마우스 따라 움직이는 이미지 */
+        width:175px; height:175px;
+        min-width: 175px;
+        padding-left:5px;
+        padding-right:2%;
+    }
+    .con2_list .con2_1 .img_border{ /* 이미지 맨앞 border */
+        border:3px solid rgba(255, 255, 255, .8);
+        box-shadow: 0 0 20px 0 #fff;
+    }
+    .con2_list .con2_2{ /* 가운데 개인정보 */
+        margin-left: 10px;
+        width: 50%;
+        white-space: nowrap;}
+    .con2_list .con2_2 .intro_tit{ /* 웹 디자이너 퍼블리셔 영어 */
+        font-size: 1.2em;
+        padding-bottom: 5px;}
+    .con2_list .con2_2 .intro_txt{ /* 이메일 전화번호 */
+        font-size: 1em;
+        letter-spacing: .02em;
+        padding-bottom: 5px;
+    }
+    .con2_list .con2_2>.han{ /* 이름 한글폰트 설정 */
+        font-size: 1.5em;
+        padding:10px 0;}
+
+    .con2_list .con2_3{
+        width: 130%; height: 40%;
+        margin: -5% auto 0;
+        margin-left: 4%;
+        display: flex; justify-content: center;}
+    .con2_list .con2_3 .explain{ /* 자기소개 글 */
+        width: 50%;
+        min-width: 200px;
+        font-size: .8em;
+        line-height: 2;
+        margin-bottom: 7.5%;
+        padding-left: 20px;
+        padding-right: 0;
+    }
+    .con2_3 .tool_icon{  /* tool list 박스너비 */
+        width: 50%; height: 100%;
+        min-width: 200px;
+        margin-top: -5%;
+        padding-right: 10px;
+        /* box-sizing: border-box; */
+    }
+    .tool_icon .tool_list li{ /* tool_list li */
+        max-height: 10px;
+        margin:0 5px;
+        z-index: 1;}
+    .tool_icon .tool_list li img{
+        width:10%;
+    }
+    .tool_icon .tool_list li:nth-child(-n+3) img{width: 9%;}
+    .con2_3 .tool_icon .tool_list li::before{
+        max-width: 15px;
+        max-height: 15px;
+    }
+    .con2_3 .tool_icon .tool_list li:nth-child(-n+3)::before{
+        transform: translate(5%, 6%);
+    }
+    
+    .tool_icon .tool_list li .graph{
+        transform: translateY(-10%);}
+    .tool_icon .tool_list li:nth-child(-n+3) .graph{
+        transform: translateY(40%);
+    }
+    .tool_list li .graph .bar{
+        font-size: .6rem;
+        line-height: 100%;
+    }
+            .m_list{ /* 포트폴리오 웹사이트 리스트 */
+                width:80%;
+                flex-direction: column;
+            }
+            .con .conbg{ /* m_list 배경 */
+                height:70%;
+                top:50%; left:0;
+            }
+    
+            .m_list .m_thum{ /* 이미지 박스 */
+                width:70%;
+                margin-left: 15%;}
+                #con3 .m_list .m_thum{margin-left: 7%;}
+                #con5 .m_list .m_thum{margin-left: 3%;}
+            .m_thum .m_thum_img{ /* 이미지 */
+                width:80%;
+                margin:0 auto;
+            }
+            .m_list .m_txt{ /* 우측 설명글 리스트 */
+                width:100%;
+                margin-left: -2%;}
+            .m_txt .txt_tit{ /* 제목 리스트 */
+                padding-top:5px;
+                white-space: nowrap;}
+            .m_txt .m_h{ /* 웹사이트 타이틀 */
+                font-size: 1.5em;
+                margin-bottom: 5px;
+            }
+            #con4 .txt_tit .m_h{
+                font-size: 1.3em;
+            }
+            .m_txt .m_h_sub{ /* 제목하단 서브타이틀 */
+                font-size:.7em;
+            }
+            #con5 .m_txt .m_h_sub{
+                letter-spacing: -.03em;
+            }
+            .m_txt .m_h_sub::after{ /* 제목하단 밑줄 */
+                margin:10px auto 15px;
+                width:90%; height:1.5px;
+            }
+            .m_txt .txt_txt{ /* 설명글 리스트 */
+                width:90%;
+                margin:0 auto;
+            }
+            .m_txt .m_p{ /* 설명글 */
+                font-size: .9em;
+                margin-bottom: 15px;
+                white-space: nowrap;}
+            .m_p>.bold{margin-right:.8em;} /* 볼드체 */
+            .m_p>.han{font-size: 0.8em;} /* 한글 */
+            .m_list .m_btnlist{ /* 웹페이지 하단 버튼 리스트 */
+                width:80%;
+                margin:40px auto 0;
+            }
+            .m_btnlist .m_btn{ /* 웹페이지 하단 버튼 */
+                /* width:10%; height:10%; */
+                padding:5px 15px;
+                font-size: .8em;
+            }
+    
+        
+            #con4 .txt_txt .m_p:first-child>.han{letter-spacing: -.1em;} /* 한옥마을 첫번째문단 */
+            #con6 .txt_txt .m_p:first-child>.han{letter-spacing: -.1em;} /* 깔루아 */
+    
+            .m_list .design_txt{ /* design 타이틀 */
+                width:50%;
+                }
+            .m_list .design_txt::after{ /* 타이틀 밑줄 */
+                margin:10px auto 15px;
+                width:100%; height:1.5px;
+            }
+            .design_txt .dt{ /* 타이틀 제목 */
+                font-size: 1.5em;
+                font-weight: 700;
+                margin-bottom: 5px;
+                letter-spacing: .05em;}
+            .design_txt .dts{ /* 타이틀 서브 */
+                font-size: .8em;
+                letter-spacing: -.02em;
+                white-space: nowrap;
+                }
+
+            .design_list .top_list,
+            .design_list .bottom_list{
+                height:40%;
+                }
+            .design_list .d_c{
+                height: auto;
+                }
+            .top_list>.d_c:hover{transform:translateY(-1em) scale(1.5, 1.5);}
+            .bottom_list>.d_c:hover{transform:translateY(1em) scale(1.5, 1.5);}
+            #con7 #footer{
+                padding:10px 0 10px;
+                }
+            #footer .footer_txt{
+                font-size: .7em;
+            }
+            #footer .footer_txt p{
+                line-height: 1em;
+                margin-bottom: 1px;}
+            #footer .footer_txt p:nth-of-type(1){
+                margin-bottom: 0;
+                line-height: 1.2em;
+                font-size: 1em;}
+    
+            #con7  .float_arrow{
+                width:.8em; height:.8em;
+                bottom: 15%;
+                transform: translateX(calc(-50% + 51px));
+            }
+            .float_arrow span{
+                border-bottom: 2px solid #fff;
+                border-right: 2px solid #fff;
+                margin:-25px;
+            }
+            .pop .pop_inner  .validation{
+                width: 100%;
+                }
+        
+    }
+
+    @media only screen and (max-width: 419px) { /* 소형 모바일 */
+        /* header */
+        #header{ /* 헤더 */
+            font-size: .9em;
+            }
+        #header .h_list{ /* 네비 리스트 */
+            width:100%;
+        }
+        #header .h_list #nav{ /* 네비 정렬 폭 */
+            width:90%;
+            }
+        /* #header .h_list #nav .nav_list li:first-child h1 .black{display: none;} */
+        /* #header .h_list #nav .nav_list li:first-child h1{display: none;} */
+        #header .h_list #nav .nav_list li:first-child h1 .hide{display: none;}
+        #header .h_list #nav .nav_list li:first-child .logo{
+            transform: translate(-60%, -47%);
+            height:1.5em;
+        }
+        #header #pagenation{
+            visibility: hidden;}
+
+        #contents{height: calc(var(--vh, 1vh)*100);}
+        .con_list .con{height: calc(var(--vh, 1vh)*100);}
+        .con_list #con1 video{height: calc(var(--vh, 1vh)*100);}
+            /* visual 비쥬얼 첫번째 화면 */
+        .con_list #con1 .con1_txt{
+            width:80vw; height: 70%;
+            min-width: 300px;
+            min-height: 335px;
+            border: 3px solid #fff;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right:10px;
+        }
+        .con1_txt .big{font-size: 1.8em;}
+        .con1_txt .small{
+            top: 150%; right:50%;
+            transform: translateX(50%);
+            font-size: 1em;
+            }
+        .con1_txt h1{
+            font-size: 3.25em;
+            margin:20% 0 15% 9px;}
+        .con1_txt h3{
+            font-size: 1.8em;
+            line-height: 1.5em;}
+            .con1_txt p{
+                bottom:-25px; right: .5px;
+            }
+        
+        #con1  .drop_arrow{
+            width:.8em; height:.8em;
+            bottom: 9%;
+            transform: translateX(calc(-50% + 52px));
+        }
+        #con1  .drop_arrow span{
+            border-bottom: 2px solid #fff;
+            border-right: 2px solid #fff;
+            margin:-25px;
+        }
+    
+        /* main */
+        #con2 .con2_list{ /* 2번째페이지 정렬 */
+            padding-top: 12%;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .con2_list .con2_1{ /* 마우스 따라 움직이는 이미지 */
+            width:125px; height:125px;
+            min-width: 125px;
+            padding-left:5px;
+            padding-right:2%;
+        }
+        .con2_list .con2_1 .img_border{ /* 이미지 맨앞 border */
+            border:3px solid rgba(255, 255, 255, .8);
+            box-shadow: 0 0 20px 0 #fff;
+        }
+        .con2_list .con2_2{ /* 가운데 개인정보 */
+            margin-left: 10px;
+            width: 50%;
+            white-space: nowrap;}
+        .con2_list .con2_2 .intro_tit{ /* 웹 디자이너 퍼블리셔 영어 */
+            font-size: 1em;
+            letter-spacing: 0.1em;
+            padding-bottom: 5px;}
+        .con2_list .con2_2 .intro_txt{ /* 이메일 전화번호 */
+            font-size: .8em;
+            letter-spacing: .02em;
+            padding-bottom: 5px;
+        }
+        .con2_list .con2_2>.han{ /* 이름 한글폰트 설정 */
+            font-size: 1.5em;
+            padding:10px 0;}
+    
+        .con2_list .con2_3{
+            width: 130%; height: 50%;
+            margin: -30% auto 0;
+            margin-left: 4%;
+            display: flex; flex-wrap: wrap;}
+        .con2_list .con2_3 .explain{ /* 자기소개 글 */
+            width: 100%;
+            min-width: 200px;
+            font-size: .6em;
+            line-height: 2;
+            margin-bottom: 7.5%;
+            padding-left: 20px;
+            padding-right: 0;
+        }
+        .con2_3 .tool_icon{  /* tool list 박스너비 */
+            width: 100%; height: 70%;
+            min-width: 200px;
+            margin-top: 1%;
+            padding-right: 10px;
+            /* box-sizing: border-box; */
+        }
+        .tool_icon .tool_list li{ /* tool_list li */
+            max-height: 10px;
+            margin:0 5px;
+            z-index: 1;}
+        .tool_icon .tool_list li img{
+            width:10%;
+        }
+        .tool_icon .tool_list li:nth-child(-n+3) img{width: 9%;}
+        .con2_3 .tool_icon .tool_list li::before{
+            max-width: 15px;
+            max-height: 15px;
+        }
+        .con2_3 .tool_icon .tool_list li:nth-child(-n+3)::before{
+            transform: translate(5%, 6%);
+        }
+        
+        .tool_icon .tool_list li .graph{
+            transform: translateY(40%);}
+        .tool_icon .tool_list li:nth-child(-n+3) .graph{
+            transform: translateY(90%);
+        }
+        .tool_list li .graph .bar{
+            font-size: .6rem;
+            line-height: 100%;
+        }
+
+            .m_list{ /* 포트폴리오 웹사이트 리스트 */
+                width:80%;
+                flex-direction: column;
+            }
+            .con .conbg{ /* m_list 배경 */
+                height:70%;
+                top:50%; left:0;
+            }
+    
+            .m_list .m_thum{ /* 이미지 박스 */
+                width:70%;
+                margin-left: 15%;}
+                #con3 .m_list .m_thum{margin-left: 7%;}
+                #con5 .m_list .m_thum{margin-left: 3%;}
+            .m_thum .m_thum_img{ /* 이미지 */
+                width:80%;
+                margin:0 auto;
+            }
+            .m_list .m_txt{ /* 우측 설명글 리스트 */
+                width:100%;
+                margin-left: -2%;}
+            .m_txt .txt_tit{ /* 제목 리스트 */
+                padding-top:5px;
+                white-space: nowrap;}
+            .m_txt .m_h{ /* 웹사이트 타이틀 */
+                font-size: 1.5em;
+                margin-bottom: 5px;
+            }
+            #con4 .txt_tit .m_h{
+                font-size: 1.3em;
+            }
+            .m_txt .m_h_sub{ /* 제목하단 서브타이틀 */
+                font-size:.7em;
+            }
+            #con5 .m_txt .m_h_sub{
+                letter-spacing: -.03em;
+            }
+            .m_txt .m_h_sub::after{ /* 제목하단 밑줄 */
+                margin:10px auto 15px;
+                width:90%; height:1.5px;
+            }
+            .m_txt .txt_txt{ /* 설명글 리스트 */
+                width:90%;
+                margin:0 auto;
+            }
+            .m_txt .m_p{ /* 설명글 */
+                font-size: .9em;
+                margin-bottom: 15px;
+                white-space: nowrap;}
+            .m_p>.bold{margin-right:.8em;} /* 볼드체 */
+            .m_p>.han{font-size: 0.8em;} /* 한글 */
+            .m_list .m_btnlist{ /* 웹페이지 하단 버튼 리스트 */
+                width:80%;
+                margin:40px auto 0;
+            }
+            .m_btnlist .m_btn{ /* 웹페이지 하단 버튼 */
+                /* width:10%; height:10%; */
+                padding:5px 15px;
+                font-size: .7em;
+            }
+    
+        
+            #con4 .txt_txt .m_p:first-child>.han{letter-spacing: -.1em;} /* 한옥마을 첫번째문단 */
+            #con6 .txt_txt .m_p:first-child>.han{letter-spacing: -.1em;} /* 깔루아 */
+    
+            .m_list .design_txt{ /* design 타이틀 */
+                width:70%;
+                }
+            .m_list .design_txt::after{ /* 타이틀 밑줄 */
+                margin:10px auto 15px;
+                width:100%; height:1.5px;
+            }
+            .design_txt .dt{ /* 타이틀 제목 */
+                font-size: 1.5em;
+                font-weight: 700;
+                margin-bottom: 5px;
+                letter-spacing: .05em;}
+            .design_txt .dts{ /* 타이틀 서브 */
+                font-size: .8em;
+                letter-spacing: -.02em;
+                white-space: nowrap;
+                }
+
+            .design_list .top_list,
+            .design_list .bottom_list{
+                height:40%;
+                }
+            .design_list .d_c{
+                height: auto;
+                }
+            .top_list>.d_c:hover{transform:translateY(-1em) scale(1.5, 1.5);}
+            .bottom_list>.d_c:hover{transform:translateY(1em) scale(1.5, 1.5);}
+            #con7 #footer{
+                padding:10px 0 10px;
+                }
+            #footer .footer_txt{
+                font-size: .7em;
+            }
+            #footer .footer_txt p{
+                line-height: 1em;
+                margin-bottom: 1px;}
+            #footer .footer_txt p:nth-of-type(1){
+                margin-bottom: 0;
+                line-height: 1.2em;
+                font-size: .9em;}
+    
+            #con7  .float_arrow{
+                width:.8em; height:.8em;
+                bottom: 15%;
+                transform: translateX(calc(-50% + 51px));
+            }
+            .float_arrow span{
+                border-bottom: 2px solid #fff;
+                border-right: 2px solid #fff;
+                margin:-25px;
+            }
+            .pop .pop_inner  .validation{
+                width: 100%;
+                }
+    }
